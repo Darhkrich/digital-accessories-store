@@ -352,14 +352,14 @@ export default function CheckoutPage() {
                 {items.map((item) => (
                   <div key={item.id} className="flex gap-3 text-sm">
                     <span className="font-medium flex-1">{item.title} × {item.quantity}</span>
-                    <span>${(item.price * item.quantity).toFixed(2)}</span>
+                    <span>GH₵{(item.price * item.quantity).toFixed(2)}</span>
                   </div>
                 ))}
               </div>
               <hr className="my-4" />
               <div className="flex justify-between font-bold text-lg">
                 <span>Total</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>GH₵{subtotal.toFixed(2)}</span>
               </div>
               <p className="text-xs text-gray-400 mt-3 text-center">
                 {subtotal >= 150 ? 'Free shipping included' : 'Shipping calculated at next step'}

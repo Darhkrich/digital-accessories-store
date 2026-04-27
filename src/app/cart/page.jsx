@@ -61,7 +61,7 @@ export default function CartPage() {
                     <Link href={`/products/${item.id}`} className="text-lg font-semibold text-gray-900 hover:text-blue-600">
                       {item.title}
                     </Link>
-                    <p className="text-gray-500 text-sm mt-1">${item.price.toFixed(2)} each</p>
+                    <p className="text-gray-500 text-sm mt-1">GH₵{item.price.toFixed(2)} each</p>
                   </div>
 
                   <div className="flex items-center justify-between mt-4">
@@ -87,7 +87,7 @@ export default function CartPage() {
                     {/* Line total & remove */}
                     <div className="flex items-center gap-4">
                       <span className="font-bold text-gray-900">
-                        ${(item.price * item.quantity).toFixed(2)}
+                        GH₵{(item.price * item.quantity).toFixed(2)}
                       </span>
                       <button
                         onClick={() => removeFromCart(item.id)}
@@ -109,7 +109,7 @@ export default function CartPage() {
               <h2 className="font-bold text-lg text-gray-900 mb-4">Order Summary</h2>
               <div className="flex justify-between text-gray-600 mb-2">
                 <span>Subtotal</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>GH₵{subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-gray-600 mb-2">
                 <span>Shipping</span>
@@ -118,7 +118,7 @@ export default function CartPage() {
               <hr className="my-4" />
               <div className="flex justify-between font-bold text-lg text-gray-900">
                 <span>Total</span>
-                <span>${subtotal.toFixed(2)}</span>
+                <span>GH₵{subtotal.toFixed(2)}</span>
               </div>
               <Link
                 href="/checkout"
@@ -127,7 +127,7 @@ export default function CartPage() {
                 Proceed to Checkout
               </Link>
               <p className="text-xs text-gray-400 mt-3 text-center">
-                Free shipping on orders over $150
+                Free shipping on orders over GH₵150
               </p>
             </div>
           </div>

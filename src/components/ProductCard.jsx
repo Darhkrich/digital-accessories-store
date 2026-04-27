@@ -84,7 +84,7 @@ export default function ProductCard({
           </div>
         )}
 
-        <p className="text-gray-500 font-medium">${price.toFixed(2)}</p>
+        <p className="text-gray-500 font-medium">GH₵{price.toFixed(2)}</p>
       </div>
     </Link>
   );
